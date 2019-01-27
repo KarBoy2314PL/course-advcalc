@@ -143,11 +143,19 @@ void MainWindow::on_btnRoot_clicked(){
 }
 
 void MainWindow::on_btnExc_clicked(){
-    sign = "!";
-    ui->txtDisplay->clear();
+    firstNum = firstNum.toInt();
+    int silnia = 1;
+
+        for (int i = 1; i <= firstNum; i++)
+        {
+            silnia = silnia * i;
+        }
+        ui->txtDisplay->setText(QString::number(silnia));
 }
 
 void MainWindow::on_btnFib_clicked(){
+    firstNum = firstNum.toInt();
+
     int suma, pop, ob, nast;
     suma = 2;
         pop = ob = 1;
